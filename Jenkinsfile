@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-    stage {
+    stage("Code coverage") {
       steps {
         sh "./gradlew jacocoTestReport"
         publishHTML(target: [
